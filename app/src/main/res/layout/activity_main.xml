@@ -9,12 +9,31 @@
     android:padding="20dp">
 
     <EditText
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="입력한 글자"
         android:textSize="30sp"
         android:background="@drawable/border_dash"/>
 
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:textSize="30sp"
+        android:textColor="@android:color/darker_gray"
+        android:background="@drawable/border_lie"
+        android:layout_marginTop="30dp"
+        />
 
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="결과"
+        android:textSize="30sp"
+        android:background="@drawable/border_dash"
+        android:layout_marginTop="30dp"/>
 
 </LinearLayout>
