@@ -13,6 +13,7 @@ public class MyReceiver extends BroadcastReceiver {
         Log.d("Process","Start BroadCast: "+msg);
         Intent recieveIntent = new Intent(context,MainActivity.class);
         recieveIntent.putExtra("String",msg);
+        recieveIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_SINGLE_TOP|Intent.FLAG_ACTIVITY_CLEAR_TASK);
         context.startActivity(recieveIntent);
     }
 }

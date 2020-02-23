@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
                 startService(serviceIntent);
             }
         });
+
+        Intent intent = getIntent();
+        processIntent(intent);
     }
 
     @Override

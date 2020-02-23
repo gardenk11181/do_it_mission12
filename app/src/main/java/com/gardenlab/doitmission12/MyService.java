@@ -21,7 +21,8 @@ public class MyService extends Service {
     public void processCommand(Intent intent) {
         String msg = intent.getStringExtra("String");
         Log.d("Process","Start Service: "+msg);
-        Intent toBroadIntent = new Intent(ACTION_MY_SERVICE);
+        Intent toBroadIntent = new Intent(getApplicationContext(),MyReceiver.class);
+        toBroadIntent.setAction(ACTION_MY_SERVICE);
         toBroadIntent.putExtra("String",msg);
         sendBroadcast(toBroadIntent);
     }
